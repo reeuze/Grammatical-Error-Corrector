@@ -5,6 +5,11 @@ from nltk.tokenize import word_tokenize
 from num2words import num2words
 from textblob import TextBlob
 
+sentence = "John Doe goes in New York on July 5th, 2021."
+
+## Load dataset
+
+## Training model
 
 ## Pre-processing sentence
 def function_normalize(sentence):
@@ -33,7 +38,6 @@ def function_replace_entities(sentence, entities):
             sentence = sentence.replace(entity.lower(), placeholder)
     return sentence
 
-sentence = "John Doe goes in New York on July 5th, 2021."
 
 normalize = function_normalize(sentence)
 entities = function_recognize_entities(normalize)
